@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso ano Junto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url(fotos/fundo.gif);
+            text-align: center;
+        }
+        header { 
+            background-color: #f82c6c;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: white;
+        }
+        section.timeline {
+            padding: 20px;
+        }
+        .event {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .boxtxt{
+            background-color: #fc568b;
+            border: white;
+            border-radius: 16px;
+            padding: 3px;
+            margin: 4px;
+            color: #ffffff;
+        }
+   
+        .polaroid {
+            display: inline-block;
+            background-color: white;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            text-align: center;
+            width: 600px;
+            margin: 20px auto;
+        }
+        .polaroid img {
+            width: 100%;
+            border-radius: 5px;
+            display: block;
+        }
+        .polaroid .caption {
+            margin-top: 10px;
+            font-size: 36px;
+            color: #000000;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffb6c1;
+            color: black;
+        }
+
+        @media (min-width: 1080px) and (min-height: 2040px) {
+            header h1 {
+                font-size: 4.2em;
+            }
+            .event {
+                margin: 40px 0;
+            }
+            .event img {
+                max-width: 3000px;
+                margin-right: 40px;
+                flex-direction: column;
+            }
+            .event div {
+                max-width: 800px;
+            }
+            h2{
+                font-size: 4.5rem;
+            }
+            h3{
+                font-size: 3.5em;
+                
+            }
+            p{
+                font-size: 2.5em;
+            }
+            .polaroid{
+                width: 600px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Retrospectiva do Nosso Amor</h1>
+    </header>
+
+    <section class="timeline">
+        <div class="event">
+            <section class="polaroid">
+                <img src="fotos/PrimeiraFoto.jpg" width="450px" alt="Polaroid Foto">
+                <div class="caption">Primeira foto na frente da Etec</div>
+            </section>
+            <div class="boxtxt">
+                <h3>Nossa Primeira Foto Juntos</h3>
+                <p>Você ainda não sabia mas aqui eu já estava completamente apaixonado por você. Sonhava com você todos os dias </p>
+            </div>
+        </div>
+        <div class="event">
+            <section class="polaroid">
+                <img src="fotos/primeiroEnc.jpg" alt="Polaroid Foto">
+                <div class="caption">Nosso primeiro encontro oficial</div>
+            </section>
+            <div class="boxtxt">
+                <h3>Primeiro Encontro</h3>
+                <p>Lembro como se fosse hoje, a gente foi a quermesse juntos, foi incrível mo. Eu já te amava muito </p>
+            </div>
+        </div>
+        <div class="event">
+            <section class="polaroid">
+                <img src="fotos/UltimaFoto.jpg" alt="Polaroid Foto">
+                <div class="caption">Nossa Ultima foto do ano</div>
+            </section>
+            <div class="boxtxt">
+                <h3>Ultima foto</h3>
+                <p>esse dia foi muito bom passei o dia inteiro com vc linda. Como você tirou essa foto foi muito bom kkkkkkkkkkkkkkkkkk</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="boxtxt">
+        <h2>Outros Momentos nossos</h2>
+    </div>
+
+    <section class="gallery">
+        <img src="fotos/Galeria1.png" alt="Foto 1">
+        <img src="fotos/Galeria2.png" alt="Foto 2">
+        <img src="fotos/Galeria3.png" alt="Foto 3">
+        <img src="fotos/Galeria4.png" alt="Foto 4">
+        <img src="fotos/Galeria5.png" alt="Foto 5">
+    </section>
+    </section>
+
+    <footer>
+        <p>Feito com amor para celebrar nossa história &#10084;</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+</html>
 
